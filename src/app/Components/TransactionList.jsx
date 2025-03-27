@@ -9,10 +9,10 @@ function TransactionList({expenses = [],removeExpense}) {
             className='list-group-item d-flex justify-content-between align-item-center ${expense.type === "expense" ? "text-danger" : "text-success" }'>
               <div>
                 <h4>{expense.description} - ${expense.amount}</h4>
-                <small className='text-muted'>{expense.date}</small>
+                <small className='btn btn-danger'>{expense.date}</small>
               </div>
-              <button className='btn btn-danger' onClick={() => removeExpense(expense.id)}>
-                Remove
+              <button onClick={() => removeExpense(expense.id)}>
+                
               </button>
             </li>
         ))}
